@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+
+    input , select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      color: black;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+      color: black;
+    }
+
+    input[type=submit] {
+
+      color: black;
+      padding: 12px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-image: linear-gradient(to bottom, rgba(46, 70, 82,0), rgba(46, 70, 82,1));color: aliceblue;
+      padding: 20px;
+
+    }
+
+    .col-25 {
+      float: left;
+      width: 15%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<br>
+
+<div class="container">
+  <form #fr="ngForm" (ngSubmit)="submit(fr)">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="fr.submitted && fr.valid">
+      <strong>Reclamation ajoutée avec succès</strong>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="nom">Nom </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nom" name="nom" placeholder="nom..."[(ngModel)]="reclamation.nom" ngModel required #n="ngModel">
+      </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="n.invalid && n.touched">Nom obligatoire!</div>
+    <div class="row">
+      <div class="col-25">
+        <label for="prenom">Prénom </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="prenom" name="prenom" placeholder="prénom..." [(ngModel)]="reclamation.prenom" ngModel required #p="ngModel">
+      </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="p.invalid && p.touched">Prénom obligatoire!</div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email </label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="xxx@xxx.xx"
+               pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]{2,4}"
+               [(ngModel)]="reclamation.email" ngModel required #e="ngModel">
+      </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="e.invalid && e.touched">
+      <div *ngIf="e.errors.required">Mail obligatoire!</div>
+      <div *ngIf="e.errors.pattern">Mail invalid</div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="object">Objet </label>
+      </div>
+      <div class="col-75">
+        <textarea id="object" name="object" placeholder="taper votre message..." style="height:200px" [(ngModel)]="reclamation.object" ngModel required #r="ngModel"></textarea>
+      </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="r.invalid && r.touched">Merci de saisir votre réclamation</div>
+    <div style="text-align: center">
+      <button class="btn btn-primary" style="background-color: teal" type="submit" [disabled]="fr.invalid">Envoyer</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+<router-outlet></router-outlet>

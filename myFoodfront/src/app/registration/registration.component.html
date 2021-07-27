@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      color: black;
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+      color: black;
+    }
+
+    input[type=submit] {
+
+      color: black;
+      padding: 12px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-image: linear-gradient(to bottom, rgba(46, 70, 82,0), rgba(46, 70, 82,1));color: aliceblue;
+      padding: 20px;
+    }
+
+    .col-25 {
+      float: left;
+      width: 15%;
+      margin-top: 6px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<br>
+
+<div class="backgroundBg"></div>
+<div class="backgroundSecBg"></div>
+
+<div class="container">
+  <div style="text-align: right">
+    <button class="btn" style="background-image:linear-gradient(to right, rgba(150, 70, 82,0), rgba(152, 70, 82,1));color: teal"
+    routerLink="/listUsers">Liste des membres</button>
+  </div>
+
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="f.submitted && f.valid">
+      <strong>Opération effectuée avec succès</strong>
+    </div>
+
+
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="nom">Nom </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nom" name="nom" placeholder="nom..." [(ngModel)]="user.nom" ngModel required #n="ngModel">
+       </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="n.invalid && n.touched">Nom obligatoire!</div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Prénom </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="prenom" placeholder="prenom..." [(ngModel)]="user.prenom" ngModel required #p="ngModel">
+      </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="p.invalid && p.touched">Prénom obligatoire!</div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="datenais">Date de naissance </label>
+      </div>
+      <div class="col-75">
+        <input type="date" id="datenais" name="dateNais" [(ngModel)]="user.dateNais">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email </label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="xxx@xxx.xx" [(ngModel)]="user.email"
+               ngModel required #e="ngModel"
+               pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]{2,4}">
+      </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="e.invalid && e.touched">
+      <div *ngIf="e.errors.required">Mail obligatoire!</div>
+      <div *ngIf="e.errors.pattern">Mail invalid</div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="photo">Photo </label>
+      </div>
+      <div class="col-75">
+        <input type="file" id="photo" name="photo" data-schema-key="photo" [(ngModel)]="user.photo">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-25">
+        <label for="pwd">Mot de passe </label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="pwd" name="pwd" [(ngModel)]="user.pwd" ngModel required #pw="ngModel" minlength="8">
+      </div>
+    </div>
+    <div class="alert alert-danger" *ngIf="pw.invalid && pw.touched">
+      <div *ngIf="pw.errors.required">Mot de passe obligatoire</div>
+      <div *ngIf="pw.errors.minlength">Mot de passe doit contenir au moins 8 caractères</div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="tel">N° tel </label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="tel" name="tel" [(ngModel)]="user.tel">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="tel">Adresse </label>
+      </div>
+      <div class="col-75">
+        <textarea type="text" id="adr" name="adresse" [(ngModel)]="user.adresse"></textarea>
+      </div>
+    </div>
+
+
+    <div style="text-align: center">
+      <button class="btn btn-primary" style="background-color: teal" type="submit" [disabled]="f.invalid">Envoyer</button>
+    </div>
+  </form>
+</div>
+</body></html>
+<router-outlet></router-outlet>

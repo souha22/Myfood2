@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  <style>
+    div {
+      width: 300px;
+      height: 200px;
+      position: relative;
+      animation-name: example;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate
+    }
+
+    @keyframes example {
+      0%   {background-image:url("assets/img/f1.jpg"); left:0px; top:-100px;size: 500px;}
+      10%  {background-image:url("assets/img/f2.jpg"); left:500px; top:-100px;size: 500px;}
+      20%  {background-image:url("assets/img/f3.jpg"); left:500px; top:300px;size: 500px;}
+      30%  {background-image:url("assets/img/f4.jpg"); left:0px; top:300px;size: 500px;}
+      40%  {background-image:url("assets/img/f5.jpg"); left:0px;right: auto; top:300px;size: 500px;}
+      50% {background-image:url("assets/img/f6.jpg"); left:0px;right: auto ;top:-100px;size: 500px;}
+      60%   {background-image:url("assets/img/f7.jpg"); left:0px; top:-100px;size: 500px;}
+      70%  {background-image:url("assets/img/f8.jpg"); left:500px; top:-100px;size: 500px;}
+      80%  {background-image:url("assets/img/f9.jpg"); left:500px; top:300px;size: 500px;}
+      90%  {background-image:url("assets/img/f10.jpg"); left:0px; top:300px;size: 500px;}
+      100%  {background-image:url("assets/img/f1.jpg"); left:20px; top:300px;size: 500px;}
+
+    }
+    h1 {
+      width: 700px;
+      height: 200px;
+      position: relative;
+      color: aquamarine;
+      animation-name: mymove;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      transition-timing-function: linear
+    }
+    @keyframes mymove {
+      from {left: 0px;}
+      to {left: 1300px;}
+    }
+
+  </style>
+  <h1>WELCOME TO THE CLUB FITNESS</h1>
+<div>
+
+</div>
+</html>

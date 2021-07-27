@@ -1,0 +1,36 @@
+<br>
+<div class="container">
+<div class="row row-cols-3">
+  <div  *ngFor="let u of listUsers">
+    <div class="row justify-content-md-center">
+    <div class="col">
+      <div class="card" style="width: 200px;height: 250px;background-color: transparent;color: white" >
+        <img src="../../assets/img/{{u.photo}}" class="card-img-top" alt="" height="90px" width="50px">
+        <div class="card-body">
+          <h5 class="card-title"> {{u.nom}} {{u.prenom}}</h5>
+          <p class="card-text">N°tel : {{u.tel}}</p>
+          <div style="text-align: center">
+          <a routerLink="/detailUser/{{u.id}}" class="btn btn-primary" title="détails" style="background-color: white">
+          <fa-icon [icon]="faSearchPlus" style="color: black" ></fa-icon>
+          </a>
+
+          <a (click)="deleteUser(u)" class="btn btn-primary" title="supprimer membre" style="background-color: white">
+            <fa-icon [icon]="faTrashAlt" style="color: red"></fa-icon>
+          </a>
+
+          <a routerLink="/registration/{{u.id}}" class="btn btn-primary" title="modifier informations" style="background-color: white">
+            <fa-icon [icon]="faPencilAlt" style="color: green"></fa-icon>
+          </a>
+        </div>
+        </div>
+
+      </div>
+      <br>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<router-outlet></router-outlet>

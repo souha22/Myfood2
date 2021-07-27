@@ -1,0 +1,30 @@
+<div class="container" >
+  <div style="text-align: left">
+<h1>Rechercher activité</h1>
+  </div>
+  <div style="text-align: right">
+    <button (click)="ngOnInit()" class="btn btn-dark border" title="Ajouter activité" routerLink="/addActivity">
+      <fa-icon [icon]="faPlusCircle" style="font-size: 20px"></fa-icon>
+    </button>
+  </div>
+  <br>
+<input type="text" name="libelle" class="form-control" [(ngModel)]="libelle">
+<br>
+<div style="text-align: right">
+  <button (click)="ngOnInit()" class="btn btn-dark border" >Initialiser</button>
+  <button (click)="findByLibelle()" class="btn btn-dark border" >Chercher</button>
+</div>
+</div>
+<br>
+
+<div class="row container" >
+  <table class="table table-borderless" style="background-image: linear-gradient(to bottom, rgba(46, 70, 82,0), rgba(46, 70, 82,1));color: aliceblue;width: 700px ">
+
+  <app-activite *ngFor="let  a of list" [aChild]="a"
+               (likeEvent)="like($event)"
+                (unlikeEvent)="unlike($event)"
+               (deleteEvent)="deleteActivite($event)">
+  </app-activite>
+  </table>
+</div>
+<router-outlet></router-outlet>

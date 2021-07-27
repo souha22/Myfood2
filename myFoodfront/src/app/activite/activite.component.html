@@ -1,0 +1,19 @@
+
+  <td style="text-align: center;font-size: 20px">{{ aChild.libelle }}</td>
+  <td style="text-align: left;font-size: 12px;width: 500px">{{aChild.description}}</td>
+  <td style="width: 300px;text-align: center"> <img style="text-align: center;width: 100px"  src="../../assets/img/{{aChild.image}}"></td>
+  <td style="width: 300px ;text-align: right">
+    <button class="btn" style="color: #cccccc" (click)="like()">
+      <fa-icon style="font-size: 15px"  [icon]="faThumbsUp"></fa-icon> {{aChild.like}}
+    </button>
+    <button class="btn" style="color: #cccccc"  (click)="unlike()">
+      <fa-icon style="font-size: 15px" [icon]="faThumbsDown"></fa-icon> {{aChild.unlike}}
+    </button>
+     <button  class="btn" style="color: red"   (click)="delete()">
+      <fa-icon style="font-size: 15px" [icon]="faTrash"></fa-icon>
+    </button>
+
+
+  </td>
+  <hr style="background-color: aqua">
+<router-outlet></router-outlet>

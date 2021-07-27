@@ -1,0 +1,92 @@
+{
+  "user": [
+    {
+      "nom": "sameh",
+      "prenom": "sameh",
+      "dateNais": "2021-05-15",
+      "email": "akkarisameh@esprit.tn",
+      "photo": "f.jfif",
+      "pwd": "123456789",
+      "tel": 125589,
+      "adresse": "nnnn",
+      "id": 1
+    }
+  ],
+  "reclamation": [
+    {
+      "nom": "chtioui",
+      "prenom": "aymen",
+      "email": "akkarisameh@esprit.tn",
+      "object": "1111",
+      "id": "1"
+    },
+    {
+      "nom": "sam",
+      "prenom": "akkari",
+      "email": "akkarisameh@esprit.tn",
+      "object": "test",
+      "id": "ade7zqN"
+    },
+    {
+      "nom": "goll",
+      "prenom": "aymen",
+      "email": "akkarisameh@esprit.tn",
+      "object": "sss",
+      "id": "pDxTETR"
+    },
+    {
+      "nom": "sameh",
+      "prenom": "sameh",
+      "email": "sameg@ss.tn",
+      "object": "test",
+      "id": "4B2PCsB"
+    },
+    {
+      "nom": "chtioui",
+      "prenom": "sameh",
+      "email": "akkarisameh@esprit.tn",
+      "object": "test",
+      "id": "hrz1UqP"
+    },
+    {
+      "nom": "chtioui",
+      "prenom": "aymen",
+      "email": "akkarisameh@esprit.tn",
+      "object": "test",
+      "id": "KIZmEpB"
+    },
+    {
+      "nom": "chtioui",
+      "prenom": "aymen",
+      "email": "akkarisameh@esprit.tn",
+      "object": "test",
+      "id": "BsJHz5S"
+    }
+  ],
+  "activite": [
+    {
+      "id": "1",
+      "libelle": "Handball",
+      "description": "Au handball, les joueurs de champ ne peuvent jouer le ballon (dont la taille varie selon les différentes catégories d'âges et de sexes) qu'avec les mains (en réalité, ils peuvent très bien user de la tête, du coude, de la cuisse…). ",
+      "like": 3,
+      "image": "handball.jpg",
+      "unlike": 1
+    },
+    {
+      "id": "2",
+      "libelle": "Football",
+      "description": "Les jeux de balle au pied existent dès l'Antiquité. Ce sont des jeux et non des sports. Les Grecs connaissent ainsi plusieurs jeux de balle se pratiquant avec les pieds",
+      "like": 1,
+      "image": "foot.jpg",
+      "unlike": 1
+    },
+    {
+      "libelle": "Tennis",
+      "description": "Le tennis est un sport de raquette qui oppose soit deux joueurs (on parle alors de jeu en simple) soit quatre joueurs qui forment deux équipes de deux (on parle alors de jeu en double).",
+      "image": "tennis.jpg",
+      "id": "v2VX5gs",
+      "like": 1,
+      "unlike": 1
+    }
+  ]
+}

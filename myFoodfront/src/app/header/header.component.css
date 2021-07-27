@@ -1,0 +1,9 @@
+.view {
+  height: 100vh !important;
+}
+.rgba-gradient .full-bg-img {
+  background: linear-gradient(45deg, rgba(121, 27, 161, 0.6), rgba(29, 210, 177, 0.6) 100%);
+}
+
+
+

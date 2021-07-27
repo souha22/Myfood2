@@ -1,0 +1,18 @@
+.backgroundBg {
+  background-image: url("src/assets/img/1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.backgroundSecBg {
+  padding: 450px!important;
+  margin: 0;
+}
+
+.templateWidth {
+  margin: 10px;
+  float: right;
+  width: 800px;
+  margin-right: 1%;
+  margin-top: -450px;
+}
