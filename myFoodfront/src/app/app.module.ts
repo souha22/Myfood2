@@ -16,6 +16,12 @@ import { HomeActiviteComponent } from './home-activite/home-activite.component';
 import { FormActiviteComponent } from './form-activite/form-activite.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AccueilComponent } from './accueil/accueil.component';
+import { ProduitComponent } from './produit/produit.component';
+import { ListProduitComponent } from './list-produit/list-produit.component';
+import { FormProduitComponent } from './form-produit/form-produit.component';
+import { RecetteComponent } from './recette/recette.component';
+import { FormRecetteComponent } from './form-recette/form-recette.component';
+import { HomeRecetteComponent } from './home-recette/home-recette.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { AccueilComponent } from './accueil/accueil.component';
     ActiviteComponent,
     HomeActiviteComponent,
     FormActiviteComponent,
-    AccueilComponent
+    AccueilComponent,
+    ProduitComponent,
+    ListProduitComponent,
+    FormProduitComponent,
+    RecetteComponent,
+    FormRecetteComponent,
+    HomeRecetteComponent
   ],
   imports: [
     BrowserModule,
