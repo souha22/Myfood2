@@ -25,6 +25,7 @@
     "angular-responsive-carousel": "^2.1.2",
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.5.0",
+    "cors": "^2.8.5",
     "ng-particles": "^2.15.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.14.1",

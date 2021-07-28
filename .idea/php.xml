@@ -5,7 +5,6 @@
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/MyFood/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/cache-contracts" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/finder" />
@@ -13,17 +12,14 @@
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/config" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/proxy-manager-bridge" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/MyFood/vendor/psr/log" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/psr/container" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/inflector" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/mime" />
@@ -34,7 +30,6 @@
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/web-server-bundle" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/yaml" />
@@ -48,10 +43,8 @@
       <path value="$PROJECT_DIR$/MyFood/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/orm-pack" />
       <path value="$PROJECT_DIR$/MyFood/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/MyFood/vendor/nelmio/cors-bundle" />
       <path value="$PROJECT_DIR$/MyFood/vendor/friendsofphp/proxy-manager-lts" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/deprecations" />
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/event-manager" />
@@ -64,11 +57,18 @@
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/doctrine-bundle" />
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/common" />
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/migrations" />
-      <path value="$PROJECT_DIR$/MyFood/vendor/sensio/framework-extra-bundle" />
       <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/doctrine-migrations-bundle" />
       <path value="$PROJECT_DIR$/MyFood/vendor/composer" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/MyFood/vendor/symfony/inflector" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
