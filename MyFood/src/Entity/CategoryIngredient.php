@@ -24,6 +24,15 @@ class CategoryIngredient
      */
     private $libelle;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Ingredients::class, mappedBy="categoryIngredient")
+     */
+    private $ingredients;
+
+    public function __construct()
+    {
+        $this->ingredients = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -42,4 +51,33 @@ class CategoryIngredient
         return $this;
     }
 
+    /**
+     * @return Collection|Ingredients[]
+     */
+    public function getIngredients(): Collection
+    {
+        return $this->ingredients;
+    }
+
+    public function addIngredient(Ingredients $ingredient): self
+    {
+        if (!$this->ingredients->contains($ingredient)) {
+            $this->ingredients[] = $ingredient;
+            $ingredient->setCategoryIngredient($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIngredient(Ingredients $ingredient): self
+    {
+        if ($this->ingredients->removeElement($ingredient)) {
+            // set the owning side to null (unless already changed)
+            if ($ingredient->getCategoryIngredient() === $this) {
+                $ingredient->setCategoryIngredient(null);
+            }
+        }
+
+        return $this;
+    }
 }
