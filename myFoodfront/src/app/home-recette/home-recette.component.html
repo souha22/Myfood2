@@ -1,0 +1,68 @@
+<div class="container" >
+  <div style="text-align: left">
+    <h1 style="color: orange">Rechercher recette</h1>
+  </div>
+  <div style="text-align: right">
+    <button (click)="ngOnInit()" class="btn btn-dark border" title="Ajouter recette" routerLink="/addRecette">
+      <fa-icon [icon]="faPlusCircle" style="font-size: 20px"></fa-icon>
+    </button>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col" style="color: white">Libellé</div>
+      <div class="col">
+        <input type="text" name="libelle" class="form-control" [(ngModel)]="libelle">
+      </div>
+      <div class="col" style="color: white">Ingrédient 1</div>
+      <div class="col">
+        <input type="text" name="ing1" class="form-control" [(ngModel)]="ing1">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col" style="color: white">Ingrédient 2</div>
+      <div class="col">
+        <input type="text" name="ing2" class="form-control" [(ngModel)]="ing2">
+      </div>
+
+      <div class="col" style="color: white">Ingrédient 3</div>
+      <div class="col">
+        <input type="text" name="ing3" class="form-control" [(ngModel)]="ing3">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col" style="color: white">Ingrédient 4</div>
+      <div class="col">
+        <input type="text" name="ing4" class="form-control" [(ngModel)]="ing4">
+      </div>
+      <div class="col" style="color: white">Ingrédient 5</div>
+      <div class="col">
+        <input type="text" name="ing5" class="form-control" [(ngModel)]="ing5">
+      </div>
+    </div>
+
+  </div>
+<br>
+<br>
+
+
+  <div style="text-align: right">
+    <button (click)="ngOnInit()" class="btn btn-dark border" >Initialiser</button>
+    <button (click)="findByLibelle()" class="btn btn-dark border" >Chercher</button>
+  </div>
+</div>
+<br>
+
+<div class="row container" >
+  <table class="table table-borderless" style="background-image: linear-gradient(to bottom, rgba(46, 70, 82,0), rgb(239,90,10));color: aliceblue;width: 700px ">
+
+    <app-recette *ngFor="let  a of list" [aChild]="a"
+                  (likeEvent)="like($event)"
+                  (unlikeEvent)="unlike($event)"
+                  (deleteEvent)="deleteRecette($event)">
+    </app-recette>
+  </table>
+</div>
+<router-outlet></router-outlet>
