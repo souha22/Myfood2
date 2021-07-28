@@ -34,7 +34,7 @@ class UserController extends AbstractController
      * @return Response
      */
     public function getAllAction(UserRepository $repository): Response
-    {ng
+    {
         return $this->restService->getAllAction($repository);
     }
 

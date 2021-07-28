@@ -61,7 +61,7 @@ class RestServiceController extends AbstractController
             //Allow all websites
             $response->headers->set('Access-Control-Allow-Origin', '*');
             // You can set the allowed methods too, if you want
-            $response->headers->set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, PATCH, OPTIONS');
+            $response->headers->set('Access-Control-Allow-Methods', 'POST');
             return $response;
         }
 
