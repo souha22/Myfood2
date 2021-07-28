@@ -20,50 +20,86 @@ class Recette
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $nom;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $date_publication;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $details;
-
-    /**
-     * @ORM\ManyToMany(targetEntity=Ingredient::class, inversedBy="recettes")
-     */
-    private $id_ingredient;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Commentaire::class, mappedBy="recette")
-     */
-    private $id_commentaire;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Avis::class, mappedBy="recette")
-     */
-    private $id_avis;
+    private $libelle;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $description;
+
+
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing1;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing2;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing3;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing4;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing5;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing6;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing7;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing8;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing9;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ing10;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $image;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
-    private $nbrLike;
+    private $liks;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $unlike;
 
     public function __construct()
     {
-        $this->id_ingredient = new ArrayCollection();
-        $this->id_commentaire = new ArrayCollection();
-        $this->id_avis = new ArrayCollection();
+
     }
 
     public function getId(): ?int
@@ -71,122 +107,147 @@ class Recette
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getLibelle(): ?string
     {
-        return $this->nom;
+        return $this->libelle;
     }
 
-    public function setNom(?string $nom): self
+    public function setLibelle(string $libelle): self
     {
-        $this->nom = $nom;
+        $this->libelle = $libelle;
 
         return $this;
     }
 
-    public function getDatePublication(): ?\DateTimeInterface
+    public function getDescription(): ?string
     {
-        return $this->date_publication;
+        return $this->description;
     }
 
-    public function setDatePublication(?\DateTimeInterface $date_publication): self
+    public function setDescription(string $description): self
     {
-        $this->date_publication = $date_publication;
+        $this->description = $description;
 
         return $this;
     }
 
-    public function getDetails(): ?string
+
+    public function getIng1(): ?string
     {
-        return $this->details;
+        return $this->ing1;
     }
 
-    public function setDetails(?string $details): self
+    public function setIng1(?string $ing1): self
     {
-        $this->details = $details;
+        $this->ing1 = $ing1;
 
         return $this;
     }
 
-    /**
-     * @return Collection|ingredient[]
-     */
-    public function getIdIngredient(): Collection
+    public function getIng2(): ?string
     {
-        return $this->id_ingredient;
+        return $this->ing2;
     }
 
-    public function addIdIngredient(ingredient $idIngredient): self
+    public function setIng2(?string $ing2): self
     {
-        if (!$this->id_ingredient->contains($idIngredient)) {
-            $this->id_ingredient[] = $idIngredient;
-        }
+        $this->ing2 = $ing2;
 
         return $this;
     }
 
-    public function removeIdIngredient(ingredient $idIngredient): self
+    public function getIng3(): ?string
     {
-        $this->id_ingredient->removeElement($idIngredient);
+        return $this->ing3;
+    }
+
+    public function setIng3(?string $ing3): self
+    {
+        $this->ing3 = $ing3;
 
         return $this;
     }
 
-    /**
-     * @return Collection|commentaire[]
-     */
-    public function getIdCommentaire(): Collection
+    public function getIng4(): ?string
     {
-        return $this->id_commentaire;
+        return $this->ing4;
     }
 
-    public function addIdCommentaire(commentaire $idCommentaire): self
+    public function setIng4(?string $ing4): self
     {
-        if (!$this->id_commentaire->contains($idCommentaire)) {
-            $this->id_commentaire[] = $idCommentaire;
-            $idCommentaire->setRecette($this);
-        }
+        $this->ing4 = $ing4;
 
         return $this;
     }
 
-    public function removeIdCommentaire(commentaire $idCommentaire): self
+    public function getIng5(): ?string
     {
-        if ($this->id_commentaire->removeElement($idCommentaire)) {
-            // set the owning side to null (unless already changed)
-            if ($idCommentaire->getRecette() === $this) {
-                $idCommentaire->setRecette(null);
-            }
-        }
+        return $this->ing5;
+    }
+
+    public function setIng5(?string $ing5): self
+    {
+        $this->ing5 = $ing5;
 
         return $this;
     }
 
-    /**
-     * @return Collection|avis[]
-     */
-    public function getIdAvis(): Collection
+    public function getIng6(): ?string
     {
-        return $this->id_avis;
+        return $this->ing6;
     }
 
-    public function addIdAvi(avis $idAvi): self
+    public function setIng6(?string $ing6): self
     {
-        if (!$this->id_avis->contains($idAvi)) {
-            $this->id_avis[] = $idAvi;
-            $idAvi->setRecette($this);
-        }
+        $this->ing6 = $ing6;
 
         return $this;
     }
 
-    public function removeIdAvi(avis $idAvi): self
+    public function getIng7(): ?string
     {
-        if ($this->id_avis->removeElement($idAvi)) {
-            // set the owning side to null (unless already changed)
-            if ($idAvi->getRecette() === $this) {
-                $idAvi->setRecette(null);
-            }
-        }
+        return $this->ing7;
+    }
+
+    public function setIng7(?string $ing7): self
+    {
+        $this->ing7 = $ing7;
+
+        return $this;
+    }
+
+    public function getIng8(): ?string
+    {
+        return $this->ing8;
+    }
+
+    public function setIng8(?string $ing8): self
+    {
+        $this->ing8 = $ing8;
+
+        return $this;
+    }
+
+    public function getIng9(): ?string
+    {
+        return $this->ing9;
+    }
+
+    public function setIng9(?string $ing9): self
+    {
+        $this->ing9 = $ing9;
+
+        return $this;
+    }
+
+    public function getIng10(): ?string
+    {
+        return $this->ing10;
+    }
+
+    public function setIng10(?string $ing10): self
+    {
+        $this->ing10 = $ing10;
 
         return $this;
     }
@@ -196,22 +257,37 @@ class Recette
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
         return $this;
     }
 
-    public function getNbrLike(): ?int
+    public function getLiks(): ?int
     {
-        return $this->nbrLike;
+        return $this->liks;
     }
 
-    public function setNbrLike(int $nbrLike): self
+    public function setLiks(?int $liks): self
     {
-        $this->nbrLike = $nbrLike;
+        $this->liks = $liks;
 
         return $this;
     }
+
+    public function getUnlike(): ?int
+    {
+        return $this->unlike;
+    }
+
+    public function setUnlike(?int $unlike): self
+    {
+        $this->unlike = $unlike;
+
+        return $this;
+    }
+
+
+
 }
